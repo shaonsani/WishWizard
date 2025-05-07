@@ -1,0 +1,13 @@
+name: wishwizard
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - django
+  - djangorestframework
+  - pip
+  - pip:
+      - django-cors-headers
+      - drf-yasg
+      - djangorestframework-simplejwt
