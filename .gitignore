@@ -1,0 +1,94 @@
+###############################################################################
+#  General                                                                #
+###############################################################################
+# OS & Editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json        # keep shared settings if you like
+!.vscode/extensions.json
+*.swp
+*~
+
+# Logs & runtime junk
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pip-log.txt
+pip-delete-this-directory.txt
+
+###############################################################################
+#  Python / Django                                                         #
+###############################################################################
+# Byte-code / compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment isolation
+.env
+.venv
+venv/
+ENV/
+env/
+pip-wheel-metadata/
+.poetry/
+# PyInstaller
+build/
+dist/
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+# Migrations you don’t want in history (uncomment if desired)
+# **/migrations/**/__pycache__/
+# !**/migrations/**/__init__.py
+
+# Coverage, test, mypy
+htmlcov/
+.coverage
+.cache/
+pytest_cache/
+.mypy_cache/
+.pytest_cache/
+
+###############################################################################
+#  Node / React (frontend)                                                 #
+###############################################################################
+node_modules/
+.cache/
+.npm/
+.pnpm-debug.log
+.browserslistrc
+# Vite / Next / CRA build outputs
+dist/
+build/
+.next/
+out/
+
+# lock files — choose the one you actually use
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+###############################################################################
+#  Docker & CI                                                             #
+###############################################################################
+# Local docker images & volumes
+**/.docker/
+docker-compose.override.yml
+
+# VS Code devcontainers
+.devcontainer/
+
+###############################################################################
+#  Secrets (just in case)                                                  #
+###############################################################################
+*.pem
+*.key
+*.crt
+*.p12
+*.env.*
