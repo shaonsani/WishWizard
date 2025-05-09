@@ -1,6 +1,7 @@
 from django.urls import path
 from django.conf import settings
+from .views import GiftListAPIView
 
 urlpatterns = [
-    # Add your URL patterns here
+   path("gifts/", GiftListAPIView.as_view(), name="gift-list"),
 ]

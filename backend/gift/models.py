@@ -17,7 +17,7 @@ class TimeStampedModel(models.Model):
     class Meta:
         abstract = True
         ordering = ("-created_at",)
-
+        
 
 class FavouritePerson(TimeStampedModel):
     user = models.ForeignKey(
@@ -30,9 +30,7 @@ class FavouritePerson(TimeStampedModel):
     email = models.EmailField(
         max_length=255, help_text=_("The email address of the person")
     )
-    phone = models.CharField(
-        max_length=20, help_text=_("The phone number of the person")
-    )
+    phone = models.CharField(max_length=20, help_text=_("The phone number of the person"))
     birth_date = models.DateField(help_text=_("Birthday in YYYY‑MM‑DD format"))
     preference_vector = models.JSONField(
         help_text=_("A JSON field to store the preference vector for the person")
@@ -59,7 +57,7 @@ class FavouritePerson(TimeStampedModel):
 
     def __str__(self) -> str:
         return f"{self.name} ({self.birth_date:%d %b})"
-
+    
 
 class Gift(TimeStampedModel):
     """
